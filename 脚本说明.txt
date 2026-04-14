@@ -1,0 +1,18 @@
+analyze-cholect50_:
+直接分析你现有的数据
+统计三元组分布、共现关系、易混淆对
+无需phase标注即可运行
+
+
+phase_triplet_analysis_final.py：
+阶段独特三元组、阶段主导三元组
+phase_triplet_prior.csv - 先验概率矩阵 [100×7]
+phase_triplet_constraints.txt - 约束规则文本
+instrument_verb_constraint.csv/npy[6×10]器械-动作约束
+verb_target_constraint.csv/npy[10×15]动作-目标约束
+instrument_target_constraint.csv/npy[6×15]器械-目标约束
+triplet_constraint_module.pyPyTorch可直接用的约束模块
+
+
+model_prior_guided.py  新模型
+train_pghcn.py             # 新训练脚本
